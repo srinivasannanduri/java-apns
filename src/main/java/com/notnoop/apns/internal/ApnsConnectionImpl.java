@@ -264,9 +264,6 @@ public class ApnsConnectionImpl implements ApnsConnection {
             socket = null;
         }
 
-        startIdleConnectionCleaner();
-        idleSince = System.currentTimeMillis();
-        
         if (socket == null || socket.isClosed()) {
             try {
                 if (proxy == null) {
